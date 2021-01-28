@@ -14,7 +14,7 @@ type WebhookPayload struct {
 }
 
 // Send - send a message via webhook
-func Send(webhook string, payload WebhookPayload) error {
+func Send(webhook string, payload *WebhookPayload) error {
 	if payload.Content == "" {
 		return fmt.Errorf("\"Content\" not found")
 	}
